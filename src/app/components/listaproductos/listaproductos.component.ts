@@ -25,13 +25,10 @@ export class ListaproductosComponent implements OnInit {
   {id:5,codigo:5, descripcion:'Doritos', precompra:5.00, preventa:8.00, garantia:3, existencia:100.00}
 ]
 
-intentando = this.productos.filter((obj:Object) => obj.id);
+// intentando = this.productos.filter((obj:Object) => obj.id);
 
-
-
-
-  id="hola michell";
-  codigo="dd";
+  id="";
+  codigo="";
 
   constructor(private router:Router, private route:ActivatedRoute){} 
 
@@ -40,9 +37,8 @@ intentando = this.productos.filter((obj:Object) => obj.id);
     this.codigo = String(this.route.snapshot.paramMap.get('codigo'));
   }
 
-  gotoUser(id:number){
+  enviarDatos(id:number){
     this.router.navigate(['/detalle',id,this.codigo])
-    // this.router.navigate(['/detalle',codigo])
   }
     
 }

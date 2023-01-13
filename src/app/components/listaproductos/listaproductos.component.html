@@ -1,5 +1,5 @@
-<h1>esto es productitos</h1>
-<button class="bg-blue-400 py-1 px-6 rounded" (click)="gotoUser(444444)">Presionar</button>
+<!-- <h1>esto es productitos</h1>
+<button class="bg-blue-400 py-1 px-6 rounded" (click)="gotoUser(444444)">Presionar</button> -->
 
 <div class="container mt-6">
     <table class="table table-bordered">
@@ -15,7 +15,7 @@
                 <th scope="col">Editar</th>
             </tr>
         <tbody>
-            <tr *ngFor="let produc of intentando">
+            <tr *ngFor="let produc of productos">
                 <td>{{produc.id}}</td>
                 <td>{{produc.codigo}}</td>
                 <td>{{produc.descripcion}}</td>
@@ -23,8 +23,7 @@
                 <td>{{produc.preventa}}</td>
                 <td>{{produc.garantia}}</td>
                 <td>{{produc.existencia}}</td>
-                <td class="text-center"><button class="bg-yellow-400 text-white px-4 rounded" (click)="gotoUser(produc.id)">Editar</button></td>
-                <!--  -->
+                <td><button class="bg-yellow-400 text-white px-4 rounded" (click)="enviarDatos(produc.id)">Editar</button></td>
             </tr>
         </tbody>
     </table>
