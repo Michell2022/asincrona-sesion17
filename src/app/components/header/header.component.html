@@ -1,1 +1,14 @@
-<p>header works!</p>
+<header class="bg-black text-white ">
+    <div class="flex justify-between">
+        <div class="text-4xl py-4 px-10 font-bold w-11/12 mx-auto">
+            <p>Productos</p>
+        </div>
+        <nav class="flex items-center">
+            <ul class="flex">
+                <li><a class="px-3 text-xl" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="bg-blue-300 rounded" routerLink="/">Home</a></li>
+                <li><a class="px-3 text-xl" routerLinkActive="bg-blue-300 rounded" routerLink="/productos">Productos</a></li>
+                <li><a class="px-3 text-xl" routerLinkActive="bg-blue-300 rounded" routerLink="/detalle">Detalle</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

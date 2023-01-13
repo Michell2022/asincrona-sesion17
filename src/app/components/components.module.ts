@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ListaproductosComponent } from './listaproductos/listaproductos.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 
 
@@ -11,7 +12,13 @@ import { ListaproductosComponent } from './listaproductos/listaproductos.compone
     ListaproductosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink,
+    RouterLinkActive
+  ],
+  exports: [
+    HeaderComponent,
+    ListaproductosComponent
   ]
 })
 export class ComponentsModule { }
