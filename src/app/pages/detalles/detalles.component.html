@@ -1,29 +1,31 @@
-<div class="w-1/2 mx-auto mt-6 p-4 border bg-blue-50 rounded">
+<div class="container w-1/2 mx-auto my-6 p-4 bg-white rounded shadow-[0_0_10px_1px_rgba(0,0,0,0.2)] " *ngFor="let item of proDetalle">
     <div class="text-center font-bold text-3xl">
         <label for="">PRODUCTO NRO: </label>
         <span>{{id}}</span>
     </div>
     <br>
     <div>
-        <label for="">Código de barras:</label><br>
-        <span>{{codigo}}</span>
+        <label class="form-label" for="">Código de barras:</label><br>
+        <input class="form-control" type="text" [(ngModel)]="item.codigo">
     </div>
     <div class="my-3">
-        <label for="">Descripción:</label><br>
-        <span>{{descripcion}}</span>
+        <label class="form-label" for="">Descripción:</label><br>
+        <input class="form-control" type="text" [(ngModel)]="item.descripcion">
     </div>
     <div class="my-3">
-        <label for="">Precio de Compra:</label>
-        <span>{{precompra}}</span>
+        <label class="form-label" for="">Precio de Compra:</label>
+        <input class="form-control" type="text" [(ngModel)]="item.precompra">
     </div>
     <div class="my-3">
-        <label for="">precio de venta:</label>
-        <span>{{preventa}}</span>
+        <label class="form-label" for="">precio de venta:</label>
+        <input class="form-control" type="text" [(ngModel)]="item.preventa">
     </div>
     <div class="my-3">
-        <label for="">Existencia:</label>
-        <span>{{existencia}}</span>
+        <label class="form-label" for="">Garantia:</label>
+        <input class="form-control" type="text" [(ngModel)]="item.garantia">
+    </div>
+    <div class="my-3">
+        <label class="form-label" for="">Existencia:</label>
+        <input class="form-control" type="text" [(ngModel)]="item.existencia">
     </div>
 </div>
- <!-- <h1>ESTO ES EL DETALLE</h1>
-<h2>{{id}}</h2>  -->

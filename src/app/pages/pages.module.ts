@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { DetallesComponent } from './detalles/detalles.component';
 import { BreakingComponent } from './breaking/breaking.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +15,9 @@ import { BreakingComponent } from './breaking/breaking.component';
     BreakingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HomeComponent,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { DataproductosService } from 'src/app/services/dataproductos.service';
 
 @Component({
   selector: 'app-detalles',
@@ -8,21 +9,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DetallesComponent implements OnInit{
 
-  id!:string;
-  codigo!:string;
-  descripcion!:string;
-  precompra!:string;
-  preventa!:string;
-  existencia!:string;
+  id!:number;
+  public proDetalle:any;
 
-    detalles!: {id:string, codigo:string};
-  // id="";
+  constructor(private route:ActivatedRoute, private data:DataproductosService){ } 
 
-  constructor(private route:ActivatedRoute){ } 
-
+  
     ngOnInit(): void {
-    this.id = String(this.route.snapshot.paramMap.get('id'));
-    this.codigo = String(this.route.snapshot.paramMap.get('codigo'));
+      
+      this.id = Number(this.route.snapshot.paramMap.get('id'));
+      this.proDetalle = this.data.datosProducto(this.id);
   
   }
 }

@@ -1,10 +1,7 @@
-<!-- <h1>esto es productitos</h1>
-<button class="bg-blue-400 py-1 px-6 rounded" (click)="gotoUser(444444)">Presionar</button> -->
-
-<div class="container mt-6">
-    <table class="table table-bordered">
+<div class="container w-4/5 mt-10 text-center">
+    <table class="table table-bordered table-hover">
         <thead>
-            <tr>
+            <tr class="text-lg bg-black text-white">
                 <th scope="col">ID</th>
                 <th scope="col">Código</th>
                 <th scope="col">Descripción</th>
@@ -15,7 +12,7 @@
                 <th scope="col">Editar</th>
             </tr>
         <tbody>
-            <tr *ngFor="let produc of productos">
+            <tr *ngFor="let produc of myProductos">
                 <td>{{produc.id}}</td>
                 <td>{{produc.codigo}}</td>
                 <td>{{produc.descripcion}}</td>
@@ -23,7 +20,7 @@
                 <td>{{produc.preventa}}</td>
                 <td>{{produc.garantia}}</td>
                 <td>{{produc.existencia}}</td>
-                <td><button class="bg-yellow-400 text-white px-4 rounded" (click)="enviarDatos(produc.id)">Editar</button></td>
+                <td><button class="bg-blue-500 text-white py-1 px-4 rounded hover:bg-orange-500 hover:text-blue-500" (click)="enviarDatos(produc.id)">Editar</button></td>
             </tr>
         </tbody>
     </table>
