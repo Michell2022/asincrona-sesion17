@@ -4,6 +4,7 @@ import { ListaproductosComponent } from './components/listaproductos/listaproduc
 import { BreakingComponent } from './pages/breaking/breaking.component';
 import { DetallesComponent } from './pages/detalles/detalles.component';
 
+
 const routes: Routes = [
 
   { path: 'productos', component:ListaproductosComponent },
